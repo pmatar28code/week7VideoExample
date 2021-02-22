@@ -8,9 +8,8 @@ import androidx.fragment.app.Fragment
 import com.example.aboutme.databinding.FragmentBioBinding
 
 class BioFragment: Fragment(R.layout.fragment_bio) {
-
-    //code for legacy apps, lets understand it, its important
-
+    // Wanted to save this code for legacy apps, lets understand it, its important
+    //that's why i leaved my comment for my github
     /* override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -20,5 +19,4 @@ class BioFragment: Fragment(R.layout.fragment_bio) {
         return FragmentBioBinding.inflate(inflater,container,false).root
     }
     */
-
 }

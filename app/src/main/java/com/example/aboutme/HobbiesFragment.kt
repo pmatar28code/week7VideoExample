@@ -7,34 +7,33 @@ import com.example.aboutme.Repository.HobbiesRepository
 import com.example.aboutme.databinding.FragmentHobbiesBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class HobbiesFragment() :Fragment(R.layout.fragment_hobbies),DialFragment.OnClickListener {
+class HobbiesFragment :Fragment(R.layout.fragment_hobbies),DialFragment.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = FragmentHobbiesBinding.bind(view)
-        val button = view.findViewById<FloatingActionButton>(R.id.floatingActionButton)
+        view.findViewById<FloatingActionButton>(R.id.floatingActionButton)
 
-        binding.floatingActionButton.setOnClickListener {this
+        binding.floatingActionButton.setOnClickListener {
             val dialog = DialFragment.create(this)
             dialog.show(parentFragmentManager, "test")
         }
         binding.hobbiesList.apply{
             adapter = HobbiesAdapter(HobbiesRepository.getHobbies())
-
-                onPositiveClick()
+            onPositiveClick()
                 adapter?.notifyDataSetChanged()
 
                 layoutManager = LinearLayoutManager(context,
                         LinearLayoutManager.VERTICAL,
                         false)
-        }
+            }
         }
 
     override fun onPositiveClick() {
     }
 
     override fun onNegativeClick() {
-        //code here
+
     }
 }
 

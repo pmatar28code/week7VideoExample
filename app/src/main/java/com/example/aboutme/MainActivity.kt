@@ -1,15 +1,9 @@
 package com.example.aboutme
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentContainerView
 import com.example.aboutme.databinding.ActivityMainBinding
-import com.example.aboutme.databinding.FragmentHobbiesBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigation.selectedItemId=R.id.menu_bio
     }
 
-    fun handeBottonNavigation(menuItemId:Int,binding:ActivityMainBinding):Boolean {
+     private fun handeBottonNavigation(menuItemId:Int, binding:ActivityMainBinding):Boolean {
         return when(menuItemId){
             R.id.menu_bio -> {
                 swapFragments(BioFragment())
@@ -45,6 +39,6 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
                 .replace(R.id.container, fragment)
                 .commit()
-    }
+        }
     }
 

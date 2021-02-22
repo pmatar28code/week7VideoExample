@@ -6,5 +6,12 @@
     i own an optical shop,i want to become an android developer.
     i have a major in industrial ingeniering and im an optician.\n
     looking forward to become a full time android developer.</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="family">Family</string>
+    <string name="please_enter_your_hobbie">Please enter your hobbie:</string>
+    <string name="new_hobbie">New hobbie</string>
+    <string name="pedro_matar">Pedro Matar</string>
+    <string name="todo">TODO</string>
+    <string name="placeholder">placeHolder</string>
 
 </resources>
