@@ -40,8 +40,6 @@ class DialFragment:DialogFragment() {
            // Add action buttons
            .setPositiveButton(R.string.submit_hobbie,
                    DialogInterface.OnClickListener { dialog, id ->
-                    // sign in the user ...
-                    //var text = view.editTextHobbie.text.toString()
                     var text = view.hobbyEditText .text.toString()
                     HobbiesRepository.addHobbie(text)
                        this.onClickListener.onPositiveClick()
