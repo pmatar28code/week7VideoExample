@@ -21,10 +21,11 @@ import java.util.stream.DoubleStream.builder
 import java.util.stream.IntStream.builder
 
 
-class CreateFragment:DialogFragment() {
-    private lateinit var onClickListener:OnClickListener
+class CreateFragment//:DialogFragment()
+{
+   /* private lateinit var onClickListener:OnClickListener
     interface OnClickListener{
-        fun onPositiveClick()
+       fun onPositiveClick()
         fun onNegativeClick()
 
     }
@@ -53,6 +54,8 @@ class CreateFragment:DialogFragment() {
                 // Create the AlertDialog object and return it
                 builder.create()
             } ?: throw IllegalStateException("Activity cannot be null")
-        }
+      }
+
+    */
     }
 

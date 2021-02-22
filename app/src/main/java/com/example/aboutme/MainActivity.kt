@@ -19,11 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
             handeBottonNavigation(it.itemId,binding)
-
         }
         binding.bottomNavigation.selectedItemId=R.id.menu_bio
     }
-
 
     fun handeBottonNavigation(menuItemId:Int,binding:ActivityMainBinding):Boolean {
         return when(menuItemId){
@@ -37,12 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.menu_hobbies ->{
                 swapFragments(HobbiesFragment())
-                //swapFragments(CreateFragment())
-
-
-
-
-                    true
+                true
             }
             else -> false
         }
@@ -51,7 +44,6 @@ class MainActivity : AppCompatActivity() {
     private fun swapFragments(fragment:Fragment) {
         supportFragmentManager.beginTransaction()
                 .replace(R.id.container, fragment)
-                //.show(fragment)
                 .commit()
     }
     }
